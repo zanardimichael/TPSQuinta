@@ -1,0 +1,56 @@
+/* =========================================
+   TEMA SCURO (Default)
+   ========================================= */
+:root,
+:root[data-theme='dark'] {
+    /* Accenti scambiati per massimo contrasto sul buio */
+    --sl-color-accent: #c2e7ff !important;
+    --sl-color-accent-high: #ffffff !important;
+    --sl-color-accent-low: #0f5682 !important;
+
+    /* Sfondi vicini al nero, ma intinti nel tuo blu scuro (#0f5682) */
+    --sl-color-bg: #08141f !important;
+    --sl-color-bg-nav: #050d14 !important;
+    --sl-color-bg-sidebar: #050d14 !important;
+}
+
+/* =========================================
+   TEMA CHIARO
+   ========================================= */
+:root[data-theme='light'] {
+    /* Accenti scambiati per massima leggibilità sul chiaro */
+    --sl-color-accent: #0f5682 !important;
+    --sl-color-accent-high: #062336 !important;
+    --sl-color-accent-low: #c2e7ff !important;
+
+    /* Sfondi vicini al bianco, ma intinti nel tuo azzurro (#c2e7ff) */
+    --sl-color-bg: #f8fbfe !important;
+    --sl-color-bg-nav: #f0f6fa !important;
+    --sl-color-bg-sidebar: #f0f6fa !important;
+}
+
+/* =========================================
+   FORZATURA STRUTTURALE (Fix per Tema Nova)
+   ========================================= */
+#starlight__sidebar,
+#starlight__sidebar .sidebar-content,
+#starlight__sidebar .nova-scroll-container {
+    background-color: var(--sl-color-bg-sidebar) !important;
+}
+
+header.header,
+.header.nova-header {
+    background-color: var(--sl-color-bg-nav) !important;
+}
+
+/* =========================================
+   FIX PROGRESS BAR
+   ========================================= */
+#scroll-progress {
+    background-color: var(--sl-color-accent) !important;
+    box-shadow: 0 0 10px var(--sl-color-accent) !important;
+}
+
+table {
+    display: inline-block;
+}
