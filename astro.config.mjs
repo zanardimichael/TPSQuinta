@@ -5,7 +5,7 @@ import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
-	site: 'https://classeprima.zanardimichael.it',
+	site: 'https://tpsquinta.zanardimichael.it',
 	base: '/',
 
 	markdown: {
@@ -15,7 +15,7 @@ export default defineConfig({
 
 	integrations: [
 		starlight({
-			title: '<Nome Dispensa>',
+			title: 'TPS Quinta',
 			logo: {
 				src: '/public/favicon.svg',
 			},
@@ -24,7 +24,7 @@ export default defineConfig({
 				'./src/katex.min.css',
 				'./src/custom.css',
 			],
-			description: 'Dispensa',
+			description: 'Dispensa di TPS',
 			social: [
 				{ icon: 'github', label: 'GitHub', href: 'https://github.com/zanardimichael' }
 			],
@@ -72,15 +72,45 @@ export default defineConfig({
 
 			sidebar: [
 				{
-					label: '📚 Corso di ',
+					label: '📚 Corso di TPS Quinta',
 					items: [
 						{
 							label: 'Introduzione al Corso',
 							link: '/lezioni/',
 						},
 						{
-							label: 'Introduzione',
+							label: 'Il Web (WWW)',
+							collapsed: true,
+							items: [
+								{
+									label: 'Panoramica Web',
+									link: '/lezioni/web/',
+								},
+								{
+									label: 'Linguaggio HTML',
+									collapsed: true,
+									autogenerate: { directory: 'lezioni/web/html' },
+								},
+								{
+									label: 'Fogli di Stile CSS',
+									collapsed: true,
+									autogenerate: { directory: 'lezioni/web/css' },
+								},
+								{
+									label: 'Programmazione JavaScript',
+									collapsed: true,
+									autogenerate: { directory: 'lezioni/web/javascript' },
+								},
+							],
+						},
+						{
+							label: 'Web Services',
 							autogenerate: { directory: 'lezioni/introduzione' },
+							collapsed: true,
+						},
+						{
+							label: 'UML | Unified Modeling Language',
+							autogenerate: { directory: 'lezioni/uml' },
 							collapsed: true,
 						},
 					]

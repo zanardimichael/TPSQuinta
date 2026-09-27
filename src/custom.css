@@ -54,3 +54,7 @@ header.header,
 table {
     display: inline-block;
 }
+
+img {
+    border-radius: 15px;
+}
