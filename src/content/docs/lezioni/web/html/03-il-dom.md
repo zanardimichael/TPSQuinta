@@ -26,7 +26,7 @@ L'HTML da solo è un linguaggio di markup statico. Attraverso il DOM, il browser
 
 Grazie a questo meccanismo, **JavaScript** può:
 
-1. **Leggere eispezionare** i dati e i valori presenti nella pagina.
+1. **Leggere e ispezionare** i dati e i valori presenti nella pagina.
 2. **Modificare** testo, attributi e stili CSS in tempo reale.
 3. **Aggiungere o rimuovere** elementi HTML dinamici senza dover ricaricare la pagina dal server.
 4. **Reagire agli eventi** dell'utente (come il click di un pulsante, il passaggio del mouse o l'invio di un modulo).

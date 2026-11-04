@@ -1,0 +1,103 @@
+---
+title: Proprietà CSS
+description: Proprietà CSS
+---
+
+## Selettori
+* `*` Seleziona tutti gli elementi di una pagina
+* `#` Seleziona tramite ID
+* `.` Selezione tramite classe
+* Senza selettore seleziona il tag
+
+## Esempi di selezione
+
+### Selezione di tutti i tag all'interno di un elemento con id "*header*"
+
+```css
+#header * {
+	/* Properties */
+}
+```
+### Selezione di tutti i tag "*table*" all'interno di un elemento con id "*header*"
+
+```css
+#header table {
+	/* Properties */
+}
+```
+### Selezione di tutti gli elementi con classe "*table-striped*" all'interno di un elemento con id "*header*"
+
+```css
+#header .table-striped {
+	/* Properties */
+}
+```
+### Selezione di tutti gli elementi figli con classe "*table-striped*" all'interno di un elemento con id "*header*"
+
+```css
+#header > .table-striped {
+	/* Properties */
+}
+```
+### Selezione di tutti gli elementi figli con classe "*table-striped*" all'interno di un elemento con id "*header*" e tutti gli elementi con classe "*table-rounded*" all'interno dell'elemento con id "*container*"
+
+```css
+#header > .table-striped, #container .table-rounded {
+	/* Properties */
+}
+```
+## Proprietà utilizzate
+
+* **background-color: *colore*;**
+    * *colore* può essere in esadecimale (es. `#f0f0f0`) oppure in rgb (es. `rgb(160, 160, 160)`).
+* **color: *colore*;**
+    * come per background-color
+* **border: *dimensione* *stile* *colore*;**
+    * *dimensione* può essere in px o in altri formati utilizzati in CSS3
+    * *stile*:
+        * none
+        * hidden
+        * dotted
+        * dashed
+        * solid
+        * double
+        * groove
+        * ridge
+        * inset
+        * outset
+    * *colore* come *background-color*
+* **border-radius: *dimensione*;**
+    * *dimensione* può essere in px o in altri formati utilizzati in CSS3
+* **border-collapse: *separate|collapse***
+* **padding: *dimensione*;**
+    * *dimensione* può essere in 3 formati diversi:
+        1. padding: 30px;
+            * 30px in tutte le direzioni
+        2. padding: 30px 20px;
+            * 30px sopra e sotto
+            * 20px sinistra e destra
+        3. padding: 10px 20px 30px 40px;
+            * 10px in alto
+            * 20px a destra
+            * 30px in basso
+            * 40px a sinistra
+* **margin: *dimensione*;**
+    * *dimensione* come per *padding*
+* **width: *dimensione*; **
+    * *dimensione* come per border
+* **height: *dimensione*;**
+* **font-family: *font*;**
+    * *font* deve contenere uno o più font che siano condivisi sui pc destinatari o che vegano importati nel codice HTML
+* **font-size: *dimensione*;**
+    * *dimensione* come per border
+* **font-weight: *weight*;**
+    * *weight*:
+        * normal
+        * bold
+        * bolder
+        * lighter
+        * 100-900 in multipli di 100
+* **text-align: *left|center|justify|right*;**
+* **line-height: *dimensione*;**
+    * *dimensione* come per border
+* **display: *inline|block|inline-block*;**

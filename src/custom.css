@@ -58,3 +58,12 @@ table {
 img {
     border-radius: 15px;
 }
+
+.astro-code {
+    display: inline-block;
+    font-size: 1em;
+}
+
+.astro-code .line {
+    padding: 0 0.5rem;
+}

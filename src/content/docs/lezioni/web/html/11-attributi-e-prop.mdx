@@ -1,0 +1,111 @@
+---
+title: Attributi e Prop
+description: Attributi e Prop
+---
+
+import { Code } from 'astro:components';
+
+### <Code code="<html> content </html>" lang="html" inline/> Tag principale
+* lang="*lingua*" | *Lingua per l'accessiblità*
+
+## Head
+### <Code code="<link/>" lang="html" inline/> Importazione dei file (utilizzato per il CSS)
+* rel="*relazione*"
+    * Obbligatorio
+    * *Bisogna inserire la relazione con il documento, abbiamo solo visto "stylesheet"*
+* href="*link*"
+    * Obbligatorio
+    * *Bisogna inserire il link al file*
+###  <Code code="<meta/>" lang="html" inline/> Definizione di metadati
+* charset="*charset*"
+    * Bisogna inserire il charset utilizzato nel file sorgente
+
+## Body
+
+### Tutti i tag
+* style="*proprietà*; *proprietà*; ..."
+    * Style inline, qui si possono definire tutte le proprietà per i singoli tag, le proprietà verranno applicate solo al tag in cui viene inserito questo attributo.
+* id="*identificatore*":
+    * Identificatore univoco all'interno della pagina.
+* class"*classe* *classe* ..."
+    * Identificatori non univoci per selezionare elementi definiti più volte in una pagina
+### <Code code="<form> content </form>" lang="html" inline/>
+* action="*link*"
+    * Predefinito: la pagina stessa
+    * Pagina in cui vengono inviati i dati del form.
+* method="POST|GET"
+    * Predefinito: GET
+    * Metodo HTTP per l'invio dei dati.
+### <Code code="<input/>" lang="html" inline/>
+* type="*tipologia*"
+    * Tipologia dell'input:
+        * text
+        * password
+        * email
+        * radio
+        * checkbox
+        * color
+        * number
+        * range
+        * submit
+        * button
+* name="*nome*"
+    * Obbligatorio
+    * Nome utilizzato per identificare il dato da inviare
+* value="*valore*"
+    * Valore di Default da visualizzare nella pagina
+* min="*minimo*"
+    * Solo per type *"range"* e *"number"*
+    * Definisce il valore minimo per l'input
+* max="*massimo*"
+    * Solo per type *"range"* e *"number"*
+    * Definisce il valore minimo per l'input
+* *disabled*
+    * Disabilita l'input
+* *checked*
+    * Solo per type *"checked"*
+    * Seleziona l'elemento checkbox
+* selected
+    * Solo per type *"radio"*
+    * Seleziona l'elemento radio
+### <Code code="<label> content </label>" lang="html" inline/>
+* for="*id*"
+    * Associa il label all'input
+### <Code code="<select> content </select>" lang="html" inline/>
+* name="*nome*"
+    * Obbligatorio
+    * Nome utilizzato per identificare il dato da inviare
+### <Code code="<option> text </option>" lang="html" inline/>
+* value="*valore*"
+    * Valore da inviare nel caso in cui venga selezionata l'opzione.
+* *disabled*
+    * Disabilita l'opzione
+* selected
+    * Seleziona l'elemento di default
+### <Code code="<button> text </button>" lang="html" inline/>
+* name="*nome*"
+    * Obbligatorio
+    * Nome utilizzato per identificare il dato da inviare.
+* value="*valore*"
+    * Valore da inviare nel caso in cui venga premuto il bottone per l'invio dei dati.
+* type="*tipologia*"
+    * submit
+        * Invia il form nel caso in cui venga cliccato
+    * button
+        * Non invia il form nel caso in cui venga cliccato
+### <Code code="<img/>" lang="html" inline/>
+* src="*location*"
+    * Obbligatorio
+    * URL dell'immagine
+* alt="*testo alternativo*"
+    * Obbligatorio
+    * Testo alternativo dell'immagine, che viene mostrato quando l'immagine non esiste o non si riesce a scaricare.
+### <Code code="<a> content </a>" lang="html" inline/>
+* href="*location*"
+    * Obbligatorio
+    * URL del link
+* target="*target*"
+    * \_self **Default**
+        * Il link viene aperto nella stessa tab
+    * \_blank
+        * Il link viene aperto in una nuova tab
